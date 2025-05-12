@@ -18,6 +18,9 @@ flags = re.DOTALL
 max_retries = 2
 
 save_dir = Path(__file__).resolve().parent / "records"
+
+os.makedirs(save_dir, exist_ok=True)
+
 dtime = datetime.now()
 save_path = os.path.join(str(save_dir), f"{dtime.year}-{dtime.month}-{dtime.day}.json")
 
@@ -36,7 +39,7 @@ def main():
     
     results = []
 
-    for tid, record in enumerate(records[:3], 1):
+    for tid, record in enumerate(records, 1):
         config = {"configurable": {"thread_id": f"{tid}"}}
         response = requests.get(record['link'])
         assert int(response.status_code) == 200
