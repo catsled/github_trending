@@ -3,7 +3,7 @@ from langchain_openai import ChatOpenAI
 
 
 BASE_URL = ""
-OLLAMA_MODEL = "qwen2.5:32b"
+OLLAMA_MODEL = "qwen3:4b"
 REMOTE_MODEL = ""
 API_KEY = "empty"
 TEMPERATURE = 0.5
@@ -16,7 +16,8 @@ def get_llm():
             model=OLLAMA_MODEL,
             temperature=TEMPERATURE
         )
-        llm.invoke("hello")
+        response = llm.invoke("hello")
+        print(response)
         return llm
     except Exception as e:
         llm = ChatOpenAI(
@@ -26,3 +27,7 @@ def get_llm():
             temperature=TEMPERATURE
         )
         return llm
+
+
+if __name__ == "__main__":
+    llm = get_llm()

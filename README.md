@@ -28,6 +28,8 @@ python run.py
 
 ## 效果
 
+![img.png](assets/result.png)
+
 ---
 
 wx公众号： ai智能熊熊
