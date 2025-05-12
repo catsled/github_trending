@@ -35,3 +35,7 @@ python run.py
 wx公众号： ai智能熊熊
 
 ![img.png](assets/img.png)
+
+飞书群: ai智能熊熊
+
+![img.png](assets/qun.jpg)
