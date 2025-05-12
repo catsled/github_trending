@@ -1,0 +1,6 @@
+langchian
+langchain_ollama
+langchain_openai
+langchain_core
+langgraph
+beautifulsoup4
